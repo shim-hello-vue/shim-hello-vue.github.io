@@ -15,7 +15,7 @@
 |STG|BRANCH|TRIGGER|URL|
 |------|---|---|---|
 |DEV|Branch of PR|manual firebase cmd*|[svue.web.app](https://svue.web.app)|
-|PRD|main|Auto Github Action|[[shimguh.github.io](https://shimguh.github.io)]|
+|PRD|main|Auto Github Action|[shimguh.github.io](https://shimguh.github.io)|
 ````bash
 # manual firebase cmd*
 $ firebase deploy

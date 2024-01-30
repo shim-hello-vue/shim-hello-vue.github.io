@@ -1,5 +1,5 @@
 # Title
-
+![화면 캡처 2024-01-30 172016](https://github.com/shim-hello-vue/shim-hello-vue.github.io/assets/80744883/6395ff62-ae73-4b3a-a47d-63e1180fe160)
 
 ### How to Contribute
 - WSL Ubuntu 22.04 LTS

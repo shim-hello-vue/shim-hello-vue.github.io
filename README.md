@@ -1,29 +1,44 @@
-# shim-hello-vue.github.io
+# Title
 
-This template should help get you started developing with Vue 3 in Vite.
 
-## Recommended IDE Setup
+### How to Contribute
+- WSL Ubuntu 22.04 LTS
+- vim
+- html/css
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+### How to Deploy
 
-## Customize configuration
+#### STG dev (svue.web.app)
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+#### STG prd (shim-hello-vue.github.io)
 
-## Project Setup
+|STG|BRANCH|TRIGGER|URL|
+|------|---|---|---|
+|DEV|Branch of PR|manual firebase cmd*|[svue.web.app](https://svue.web.app)|
+|PRD|main|Auto Github Action|[[shimguh.github.io](https://shimguh.github.io)]|
+````bash
+# manual firebase cmd*
+$ firebase deploy
 
-```sh
-npm install
-```
+=== Deploying to 'sproject-f2667'...
 
-### Compile and Hot-Reload for Development
+i  deploying hosting
+i  hosting[svue]: beginning deploy...
+i  hosting[svue]: found 5 files in docs
+✔  hosting[svue]: file upload complete
+i  hosting[svue]: finalizing version...
+✔  hosting[svue]: version finalized
+i  hosting[svue]: releasing new version...
+✔  hosting[svue]: release complete
 
-```sh
-npm run dev
-```
+✔  Deploy complete!
 
-### Compile and Minify for Production
+Project Console: https://console.firebase.google.com/project/sproject-f2667/overview
+Hosting URL: https://svue.web.app
 
-```sh
-npm run build
-```
+````
+
+### Thanks to design template
+
+THNAK YOU!
+

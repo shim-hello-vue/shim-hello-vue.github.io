@@ -37,8 +37,3 @@ Project Console: https://console.firebase.google.com/project/sproject-f2667/over
 Hosting URL: https://svue.web.app
 
 ````
-
-### Thanks to design template
-
-THNAK YOU!
-

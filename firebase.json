@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "site": "svue",
+    "public": "docs",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

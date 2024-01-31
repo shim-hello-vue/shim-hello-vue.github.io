@@ -7,7 +7,7 @@ const categories = ref(category)
 
 <template>
 <div v-for="item in categories">
-<div v-if="item.rank < 11">
+<div v-if="item.artist.includes('Ariana')">
 	<br> <div> rank : {{item.rank}} </div>
 	<div> name : {{ item.name }} </div>
 	<div> artist : {{ item.artist }} </div>

@@ -6,7 +6,11 @@ const categories = ref(category)
 </script>
 
 <template>
-<li v-for="item in categories">
-	{{ item.name }} - {{ item.code }}
-</li>
+<div v-for="item in categories">
+	<br> <div> rank : {{item.rank}} </div>
+	<div> name : {{ item.name }} </div>
+	<div> artist : {{ item.artist }} </div>
+	<div> peak rank : {{item.peak_rank}} </div>
+	<div> weeks on chart : {{item.weeks_on_chart}} </div> <br> <hr>
+</div>
 </template>

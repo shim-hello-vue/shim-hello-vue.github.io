@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue'
-const message = ref('Hello World!')
+const message = ref({name: "shim", age: 25})
 </script>
 
 <template>

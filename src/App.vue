@@ -1,7 +1,7 @@
 <script setup>
-// import { ref } from 'vue'
+import { ref } from 'vue'
 import category from "@/assets/category.json"
-const categories = category
+const categories = ref(category)
 
 </script>
 

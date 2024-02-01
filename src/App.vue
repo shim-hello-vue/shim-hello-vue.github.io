@@ -12,5 +12,6 @@ const publishedBooksMessage = computed(() => {return author.value.books.length >
 
 <template>
 <p>Has published books:</p>
-<span>{{publishedBooksMessage}}</span>
+<span>{{author.books.length > 2 ? 'Yes' : 'No'}}</span>
+<div>{{publishedBooksMessage}}</div>
 </template>

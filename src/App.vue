@@ -9,10 +9,11 @@ const todos = ref([
 
 function addTodo() {
 	todos.value.push({id: id++, issue: newTodo.value})
+	newTodo.value = ''
 }
 
 function removeTodo(todo) {
-todos.value = todos.value.filter((t) => t !== todo)
+	todos.value = todos.value.filter((t) => t !== todo)
 }
 </script>
 

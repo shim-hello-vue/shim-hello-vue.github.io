@@ -1,18 +1,16 @@
 <script setup>
-import { ref } from 'vue'
-import category from "@/assets/category.json"
-const categories = ref(category)
+import {reactive, computed, ref} from 'vue'
 
+const author = ref({
+name: 'Jonhn Doe',
+books: [1, 2, 3]
+})
+
+// a computed ref
+const publishedBooksMessage = computed(() => {return author.value.books.length > 2 ? 'Yes' : 'No' })
 </script>
 
 <template>
-<div v-for="item in categories">
-<div v-if="item.artist.includes('Ariana')">
-	<br> <div> rank : {{item.rank}} </div>
-	<div> name : {{ item.name }} </div>
-	<div> artist : {{ item.artist }} </div>
-	<div> peak rank : {{item.peak_rank}} </div>
-	<div> weeks on chart : {{item.weeks_on_chart}} </div> <br> <hr>
-</div>
-</div>
+<p>Has published books:</p>
+<span>{{publishedBooksMessage}}</span>
 </template>

@@ -1,11 +1,11 @@
 <script setup>
-import {ref} from 'vue'
+import {ref, onUpdated} from 'vue'
 
-const message = ref('')
+const count = ref(0)
+onUpdated(() => {
+console.log(document.getElementById('count').textContent)})
 </script>
 
 <template>
-<span>Multiline message is:</span>
-<p stle="white-space: pre-line;">{{message}}</p>
-<textarea v-model="message" placeholder="and multiple silnes"></textarea>
+<button id="count" @click="count++">{{count}}</button>
 </template>

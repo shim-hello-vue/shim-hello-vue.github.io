@@ -3,7 +3,14 @@ import {ref, onUpdated, onMounted, onBeforeUpdate} from 'vue'
 
 const count = ref(0)
 onUpdated(() => {
-console.log(document.getElementById('count').textContent)})
+console.log('onUpdated', document.getElementById('count').textContent)
+})
+onMounted(() => {
+console.log('onMounted', document.getElementById('count').textContent)
+})
+onBeforeUpdate(() => {
+console.log('onBeforeUpdate', document.getElementById('count').tetxtContent)
+})
 </script>
 
 <template>

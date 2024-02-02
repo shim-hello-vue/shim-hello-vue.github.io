@@ -11,6 +11,9 @@ const res = await fetch(
 todoData.value = await res.json()
 }
 
+// watchers
+watch(todoId, fetchData)
+
 fetchData()
 
 //

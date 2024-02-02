@@ -1,47 +1,34 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import {ref} from 'vue'
+
+const show = ref(true)
+const list = ref([1, 2, 3])
+let n = 4
+
+function showtoggle() {
+	show.value = !show.value
+}
+function push() {
+        list.value.push(n++)
+}
+function pop() {
+        list.value.pop(n--)
+
+}
+function reverse() {
+        list.value.reverse()
+}
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+<button @click=showtoggle()>List 렌더링 ON/OFF</button>
+<button @click=push() >List 추가</button>
+<button @click=pop() >List 제거</button>
+<button @click=reverse() >List 뒤집기</button>
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+<ul v-if=show>
+        <li v-for="item of list">{{item}}</li>
+</ul>
+<p v-else-if="list.length">List is not empty, but hidden.</p>
+<p v-else>List is empty/</p>
 </template>
-
-<style scoped>
-header {
-  line-height: 1.5;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
-</style>

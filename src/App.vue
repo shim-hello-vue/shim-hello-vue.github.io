@@ -6,7 +6,8 @@ const todoId = ref(1); const todoData = ref(null)
 async function fetchData() {
 todoData.value = null
 const res = await fetch(
-	`https://jsonplaceholder.typicode.com/todos/${todoId.value}`
+	// `https://jsonplaceholder.typicode.com/todos/${todoId.value}`
+	`http://localhost:3000/posts/${todoId.value}`
 )
 todoData.value = await res.json()
 }
